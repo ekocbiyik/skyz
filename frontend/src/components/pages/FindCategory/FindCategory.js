@@ -4,8 +4,16 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 class FindCategory extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            category: ''
+        }
+    }
   searchCategory = (value) => {
-    console.log('category', value)
+    this.setState({
+        category: value
+    })
   }
   render() {
     return (
@@ -19,11 +27,14 @@ class FindCategory extends React.Component {
                     onSearch={value => this.searchCategory(value)}
                     style={{ width: 200 }}
                 />
+                <br/>
+                {
+                    this.state.category
+                }
             </div>
             
         </>
     )
-  }}
-
+}}
 
 export default FindCategory;
