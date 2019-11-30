@@ -4,13 +4,13 @@ __author__ = 'assendis'
 
 
 class BaseModel(models.Model):
-    title = models.CharField(max_length=1000, null=False)
-    content = models.CharField(max_length=10000, null=False)
-    url = models.CharField(max_length=10000, null=False)
-    keywords = models.CharField(max_length=10000)
-    date = models.DateTimeField(null=False)
-    status = models.CharField(max_length=100, null=False)
-    counter = models.IntegerField(null=False)
+    title = models.CharField(max_length=1000, null=True)
+    content = models.CharField(max_length=10000, null=True)
+    url = models.CharField(max_length=10000, null=True)
+    keywords = models.CharField(max_length=10000, null=True)
+    date = models.DateTimeField(null=True)
+    status = models.CharField(max_length=100, null=True)
+    counter = models.IntegerField(null=True)
 
     class Meta:
         abstract = True
