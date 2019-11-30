@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&display=swap');
+
+.avatar-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  text-align: center;
+  margin: 30px;
+}
+
+/* .image-wrapper .name {
+  text-align: center;
+} */
+
+.main-image-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.welcome {
+  margin: auto;
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 500px;
+}
+
+.team-name {
+  font-size: 140px;
+  font-family: 'Lobster', cursive;
+}
+
+.name-wrapper {
+  text-align: center;
+  color: #2E2C2C
+}
+
+.name {
+  font-family: 'Patua One', cursive;
+  font-size: 25px;
+}
+
+.nickname {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
