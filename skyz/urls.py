@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from skyz.rest.login import Login
+from skyz.rest.elastic_query import ElasticView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', Login.as_view())
+    url(r'^login/', Login.as_view()),
+    url(r'^api/elastic', ElasticView.as_view()),
 ]
+
+
 
 

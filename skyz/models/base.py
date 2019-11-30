@@ -4,6 +4,7 @@ __author__ = 'assendis'
 
 
 class BaseModel(models.Model):
+
     title = models.CharField(max_length=1000, null=True)
     content = models.CharField(max_length=10000, null=True)
     url = models.CharField(max_length=10000, null=True)
