@@ -7,6 +7,9 @@ import Enbiya from '../../../img/enbiya.jpeg'
 import Talha from '../../../img/talha.jpeg'
 import { Row, Col } from 'antd';
 import { Button } from 'antd';
+import {
+    Link,
+  } from "react-router-dom";
 
 class Welcome extends React.Component {
   render() {
@@ -85,7 +88,9 @@ class Welcome extends React.Component {
         </Row>
         <Row>
             <Col className="start">
-                <Button type="danger">Hadi Başlayalım</Button>
+                <Link to="/find-category">
+                    <Button type="danger">Hadi Başlayalım</Button>
+                </Link>
             </Col>
         </Row>
       </div>
