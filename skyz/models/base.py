@@ -12,4 +12,7 @@ class BaseModel(models.Model):
     status = models.CharField(max_length=100, null=False)
     counter = models.IntegerField(null=False)
 
+    class Meta:
+        abstract = True
+
 
