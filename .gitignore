@@ -6,7 +6,6 @@
 *.out
 *.pot
 *.py[co]
-*.sqlite3*
 *.db
 *.pyc
 *version__.py
