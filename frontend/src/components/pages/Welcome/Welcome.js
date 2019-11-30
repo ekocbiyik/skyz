@@ -6,6 +6,7 @@ import Cagri from '../../../img/cagri.jpeg'
 import Enbiya from '../../../img/enbiya.jpeg'
 import Talha from '../../../img/talha.jpeg'
 import { Row, Col } from 'antd';
+import { Button } from 'antd';
 
 class Welcome extends React.Component {
   render() {
@@ -81,6 +82,11 @@ class Welcome extends React.Component {
                     </div>
                 </Col>
             </Row>
+        </Row>
+        <Row>
+            <Col className="start">
+                <Button type="danger">Hadi Başlayalım</Button>
+            </Col>
         </Row>
       </div>
     )

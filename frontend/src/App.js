@@ -1,6 +1,6 @@
 import React from 'react';
-// import 'antd/dist/antd.css';
-// import './App.css';
+import 'antd/dist/antd.css';
+import './App.css';
 import Welcome from './components/pages/Welcome/Welcome'
 
 class App extends React.Component {

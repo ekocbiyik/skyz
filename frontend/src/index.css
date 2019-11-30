@@ -21,7 +21,7 @@
 } */
 
 .main-image-wrapper {
-  display: flex;
+  display: flex !important;
   justify-content: center;
   max-width: 1000px;
 }
@@ -43,6 +43,7 @@
 .team-name {
   font-size: 140px;
   font-family: 'Lobster', cursive;
+  line-height: 1.3 !important;
 }
 
 .name-wrapper {
@@ -58,10 +59,20 @@
 .nickname {
   font-family: 'Libre Baskerville', serif;
   font-size: 12px;
-  margin-top: 5px;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.start {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.start button {
+  width: 200px;
+  height: 50px;
 }
