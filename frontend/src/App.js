@@ -8,7 +8,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import FindCategory from './components/pages/FindCategory/FindCategory'
+import FindCategory from './components/pages/FindCategory/FindCategory';
+import MailSubject from './components/pages/MailSubject/MailSubject'
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,9 @@ class App extends React.Component {
           <Switch>
             <Route path="/find-category">
               <FindCategory />
+            </Route>
+            <Route path="/email-subject">
+              <MailSubject />
             </Route>
             <Route path="/">
               <Welcome />

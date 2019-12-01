@@ -84,3 +84,9 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.email-subject {
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}
