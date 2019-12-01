@@ -11,13 +11,13 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         model_names = ['ekonomi', 'politika', 'sanat', 'spor', 'teknoloji']
-        f = open(self.folder_path + 'all_formatted.txt', 'w+')
-        f.write('text,label'+os.linesep)
+        # f.write('text,label'+os.linesep)
         for model_name in model_names:
+            f = open(self.folder_path +'reis_'+model_name+'_formatted.txt', 'w+')
             model = AppConfig.get_model(apps.get_app_config('skyz'), model_name=model_name)
             for m in list(model.objects.all()):
                 line = m.__dict__
                 f.write(self.format_line(line, model_name))
 
     def format_line(self, line, model_name):
-        return ' '.join(line['content'].translate(str.maketrans('', '', string.punctuation)).lower().split()) + ',' + model_name + os.linesep
+        return ' '.join(line['content'].translate(str.maketrans('', '', string.punctuation)).lower().split()) + os.linesep
