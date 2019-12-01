@@ -14,7 +14,7 @@ class BayesSearch(APIView):
 
 
     def post(self, request):
-        category = self.post_to_bayes(self.request.data['context'])
+        category = self.post_to_bayes(self.request.query_params['context'])
         return Response(category)
 
     def post_to_bayes(self, content):

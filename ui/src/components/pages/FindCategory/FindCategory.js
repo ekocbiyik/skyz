@@ -13,23 +13,31 @@ class FindCategory extends React.Component {
         super(props)
         this.state = {
             category: '',
-            data: ''
+            ElasticData: '',
+            BayesData: ""
         }
     }
 
   searchCategory = (value) => {
-    //     axios.post(`http://127.0.0.1:8000/api/elasticsearch?context=yeni çıkan telefonlar 4 kamerası ile self çekmek mükü`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
-    //   .then(res => {
-    //     console.log("iresponse", res)
-    //   })
-
-    this.setState({
-        category: value,
-        data: fakeData
+    axios.post(`http://127.0.0.1:8000/api/elasticsearch?context=` + value, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
+    .then(res => {
+        this.setState({
+            category: value,
+            ElasticData: res.data
+        })
     })
+
+    axios.post(`http://127.0.0.1:8000/api/bayessearch?context=` + value, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
+    .then(res => {
+        this.setState({
+            category: value,
+            BayesData: res.data
+        })
+    })
+    
   }
   render() {
-      const { data } = this.state;
+      const { ElasticData, BayesData } = this.state;
     return (
         <>
             <div className="name-wrapper">
@@ -42,7 +50,7 @@ class FindCategory extends React.Component {
                     />
                 </div>
                 {
-                    data &&
+                    ElasticData &&
                     <Row>
                         <Col span={12} className="main-image-wrapper">
                             <div>
@@ -51,8 +59,8 @@ class FindCategory extends React.Component {
                                 </div>
                                 <div className="elastic-result">
                                     {
-                                        data &&
-                                        data[0]['_source']['category']
+                                        ElasticData &&
+                                        ElasticData[0]['_source']['category']
                                     }
                                 </div>
                             </div>
@@ -64,8 +72,8 @@ class FindCategory extends React.Component {
                                 </div>
                                 <div className="native-result">
                                     {
-                                        data &&
-                                        data[0]['_source']['category']
+                                        BayesData &&
+                                        BayesData
                                     }
                                 </div>
                             </div>
