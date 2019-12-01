@@ -85,7 +85,7 @@ body {
 }
 
 .email-subject {
-  width: 500px;
+  width: 900px;
   margin: auto;
   margin-top: 40px;
 }
@@ -100,4 +100,12 @@ body {
 
 .algo-result {
   text-align: center;
+}
+
+.category-result {
+  font-weight: bold;
+}
+
+.category-spin {
+  margin-left: 6px !important;
 }

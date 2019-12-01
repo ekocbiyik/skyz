@@ -15,14 +15,10 @@ class FindCategory extends React.Component {
         }
     }
     componentDidMount = () => {
-        console.log("zıkkımm")
-        axios.post(`http://127.0.0.1:8000/api/elasticsearch?context=yeni çıkan telefonlar 4 kamerası ile self çekmek mükü`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
-      .then(res => {
-        console.log("iresponse", res)
-      })
-
-
-
+    //     axios.post(`http://127.0.0.1:8000/api/elasticsearch?context=yeni çıkan telefonlar 4 kamerası ile self çekmek mükü`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
+    //   .then(res => {
+    //     console.log("iresponse", res)
+    //   })
 
     }
   searchCategory = (value) => {

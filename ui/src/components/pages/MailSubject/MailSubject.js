@@ -2,6 +2,7 @@ import React from 'react';
 import { Collapse } from 'antd';
 import { Spin } from 'antd';
 import axios from "axios"
+import fakeData from './fakeData';
 
 const { Panel } = Collapse;
 
@@ -16,7 +17,8 @@ class MailSubject extends React.Component {
         super(props)
         this.state = {
             category: '',
-            count: 1
+            count: 0,
+            data: ''
         }
     }
   searchCategory = (value) => {
@@ -25,14 +27,16 @@ class MailSubject extends React.Component {
     })
   }
   componentDidMount() {
-      console.log("iburada")
-    axios.post(`http://127.0.0.1:8000/login/`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
-      .then(res => {
-        console.log("iresponse", res)
-      })
+    // axios.post(`http://127.0.0.1:8000/login/`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
+    //   .then(res => {
+    //     console.log("iresponse", res)
+    //   })
+    this.setState({
+        data: fakeData
+    })
     setTimeout(
         this.startTimeout,
-        1000
+        700
     );
   }
 
@@ -45,7 +49,7 @@ class MailSubject extends React.Component {
         },() => {
             setTimeout(
                 this.startTimeout,
-                1000
+                700
             );
         });
     }
@@ -58,6 +62,7 @@ class MailSubject extends React.Component {
   }
 
   render() {
+      const { data } = this.state
     return (
         <>
             <div className="name-wrapper">
@@ -65,16 +70,14 @@ class MailSubject extends React.Component {
             </div>
             <div className="email-subject">
                 <Collapse accordion>
-                     <Panel header={<div>Etkinlik {this.state['isLoaded1'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="1">
-                        <p>{text}</p>
-                        dgdgd
-                    </Panel>
-                    <Panel header={<div>Spor Bulteni {this.state['isLoaded2'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="2">
-                        <p>{text}</p>
-                    </Panel>
-                    <Panel header={<div>Finans {this.state['isLoaded3'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="3">
-                        <p>{text}</p>
-                    </Panel>
+                    {
+                        data &&
+                        data.map((item,i) => {
+                            return <Panel header={<div>{item.header} {this.state[`isLoaded${i}`] === undefined ? <Spin className="category-spin" size="small" /> : <span className="category-result"> Kategorisi: {item.subject[0]['_source']['category']}</span>}</div>} key={i}>
+                            <p>{item.body}</p>
+                        </Panel>
+                        })
+                    }
                 </Collapse>
             </div>
         </>
