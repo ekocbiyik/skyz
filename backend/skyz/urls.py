@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from skyz.rest.login import Login
+from skyz.rest.elastic_query import ElasticSearch, ElasticInsert
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', Login.as_view()),
+    url(r'^api/elasticsearch', ElasticSearch.as_view()),
+    url(r'^api/elasticinsert', ElasticInsert.as_view()),
 ]
+
+
+
+
