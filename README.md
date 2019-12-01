@@ -22,6 +22,22 @@ Sınıflandırma işlemini ElasticSearch ve Bayes Algoritmasıyla farklı platfo
 ayrı ayrı gerçekleştirilerek sonuçlar karşılaştırıldı. 
 ElasticSearch sonuçlarının doğruluk oranı yüksek, fakat daha yavaş,
 Bayes algoritmasının ise doğruluk oranı daha düşük fakat daha hızlı olduğu görüldü.
+
+Django custom commands 
+
+test_ai_bayes
+
+  python manage.py test_ai_bayes
+
+Sonuç %80 başarı oranı.
+
+
+test_ai_elastic
+
+  python manage.py test_ai_elastic
+
+Sonuç %92 başarı oranı
+
 ​
 ​
 ELASTIC SEARCH
