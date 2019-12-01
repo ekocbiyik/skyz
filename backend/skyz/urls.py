@@ -17,11 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from skyz.rest.login import Login
 from skyz.rest.elastic_query import ElasticSearch, ElasticInsert
+from skyz.rest.test_date_insert import TestData
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', Login.as_view()),
     url(r'^api/elasticsearch', ElasticSearch.as_view()),
     url(r'^api/elasticinsert', ElasticInsert.as_view()),
+    url(r'^api/testdateinsert', TestData.as_view()),
 ]
 
 

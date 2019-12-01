@@ -1,9 +1,10 @@
 from rest_framework.views import APIView
-from rest_framework.response import Response
-import requests
-import json
+from skyz.models.model import TestDataTablosu
 
-class TestDate(APIView):
+
+class TestData(APIView):
 
     def post(self):
-        return Response('asdf')
+        content = self.request.data['content']
+        category = self.request.data['category']
+        TestDataTablosu.objects.create(content=content, category=category)
