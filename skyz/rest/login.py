@@ -6,6 +6,7 @@ from skyz.views.mail_view import get_messages
 class Login(APIView):
     def get(self, request):
         service = GoogleApi()
-        get_messages(service=service)
+        messages = get_messages(service=service)
+        return messages
 
 

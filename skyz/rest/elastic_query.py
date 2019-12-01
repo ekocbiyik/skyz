@@ -26,7 +26,7 @@ class ElasticView(APIView):
         return Response(category)
 
     def post_to_elastic(self, like):
-        self.body['query']['more_like_this']['like'] = [self.request.query_params['context']]
+        self.body['query']['more_like_this']['like'] = like
         headers = {'content-type': 'application/json'}
         f = requests.post(url=self.electic_backend_ip + self.electic_api_path, data=json.dumps(self.body), headers=headers)
         content = json.loads(f.content)
