@@ -5,7 +5,7 @@ from rest_framework.response import Response
 
 
 class Login(APIView):
-    def get(self, request):
+    def post(self, request):
         service = GoogleApi()
         messages = get_messages(service=service)
         return Response(messages)

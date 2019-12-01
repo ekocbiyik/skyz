@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&display=swap');
+
+.avatar-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  text-align: center;
+  margin: 30px;
+}
+
+/* .image-wrapper .name {
+  text-align: center;
+} */
+
+.main-image-wrapper {
+  display: flex !important;
+  justify-content: center;
+  max-width: 1000px;
+}
+
+.welcome {
+  margin: auto;
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 500px;
+}
+
+.team-name {
+  font-size: 140px;
+  font-family: 'Lobster', cursive;
+  line-height: 1.3 !important;
+}
+
+.name-wrapper {
+  text-align: center;
+  color: #2E2C2C
+}
+
+.name {
+  font-family: 'Patua One', cursive;
+  font-size: 25px;
+}
+
+.nickname {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.start {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.start button {
+  width: 200px;
+  height: 50px;
+}
+
+.find-category {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.email-subject {
+  width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.elastic-algo {
+  width: 350px;
+}
+
+.naive-algo {
+  width: 200px;
+}
+
+.algo-result {
+  text-align: center;
+}

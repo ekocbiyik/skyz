@@ -28,3 +28,26 @@ coverage.xml
 prospector.json
 middleware/target
 backend/env
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+ui/node_modules
+ui/.pnp
+ui/.pnp.js
+
+# testing
+ui/coverage
+
+# production
+ui/build
+
+# misc
+ui/.DS_Store
+ui/.env.local
+ui/.env.development.local
+ui/.env.test.local
+ui/.env.production.local
+
+ui/npm-debug.log*
+ui/yarn-debug.log*
+ui/yarn-error.log*
