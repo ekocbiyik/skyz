@@ -3,6 +3,7 @@ import { Input } from 'antd';
 import { Row, Col } from 'antd';
 import Naive from '../../../img/naive.jpg';
 import Elastic from '../../../img/elasticsearch.png'
+import axios from "axios"
 
 const { Search } = Input;
 
@@ -13,12 +14,24 @@ class FindCategory extends React.Component {
             category: ''
         }
     }
+    componentDidMount = () => {
+        console.log("zıkkımm")
+        axios.post(`http://127.0.0.1:8000/api/elasticsearch?context=yeni çıkan telefonlar 4 kamerası ile self çekmek mükü`, {headers: {"Access-Control-Allow-Origin": "*", "Content-Type":"application/json","Access-Control-Allow-Headers": "Origin, X-Requested-With", "Content-Type": "Accept"}})
+      .then(res => {
+        console.log("iresponse", res)
+      })
+
+
+
+
+    }
   searchCategory = (value) => {
     this.setState({
         category: value
     })
   }
   render() {
+    console.log("render")
     return (
         <>
             <div className="name-wrapper">
