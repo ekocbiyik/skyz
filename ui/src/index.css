@@ -24,7 +24,6 @@
 .main-image-wrapper {
   display: flex !important;
   justify-content: center;
-  max-width: 1000px;
 }
 
 .welcome {
@@ -45,6 +44,7 @@
   font-size: 140px;
   font-family: 'Lobster', cursive;
   line-height: 1.3 !important;
+  color: #2E2C2C;
 }
 
 .name-wrapper {
@@ -86,7 +86,6 @@ body {
 }
 
 .email-subject {
-  width: 900px;
   margin: auto;
   margin-top: 40px;
 }
@@ -126,4 +125,13 @@ body {
 .find-category .ant-input-search {
   width: 500px !important;
   height: 40px;
+}
+
+.spinn {
+  display: flex;
+  justify-content: center;
+}
+
+.email-elastic {
+  margin-bottom: 15px;
 }

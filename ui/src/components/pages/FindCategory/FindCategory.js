@@ -4,7 +4,9 @@ import { Row, Col } from 'antd';
 import Naive from '../../../img/naive.jpg';
 import Elastic from '../../../img/elasticsearch.png'
 import axios from "axios"
-import fakeData from './fakeData';
+import {
+    Link,
+  } from "react-router-dom";
 
 const { Search } = Input;
 
@@ -41,7 +43,10 @@ class FindCategory extends React.Component {
     return (
         <>
             <div className="name-wrapper">
+            <Link to="/email">
                 <span className="team-name">Skyz</span>
+            </Link>
+                
             </div>
                 <div className="find-category">
                     <Search
@@ -49,9 +54,27 @@ class FindCategory extends React.Component {
                         onSearch={value => this.searchCategory(value)}
                     />
                 </div>
+                <Row>
+                {
+                    BayesData &&
+                    <Col span={12} className="main-image-wrapper">
+                            <div>
+                                <div>
+                                <img className="naive-algo" src={Naive} />
+                                </div>
+                                <div className="native-result">
+                                    {
+                                        BayesData &&
+                                        BayesData
+                                    }
+                                </div>
+                            </div>
+                        </Col>
+                    
+                }
                 {
                     ElasticData &&
-                    <Row>
+                    
                         <Col span={12} className="main-image-wrapper">
                             <div>
                                 <div>
@@ -65,21 +88,10 @@ class FindCategory extends React.Component {
                                 </div>
                             </div>
                         </Col>
-                        <Col span={12} className="main-image-wrapper">
-                            <div>
-                                <div>
-                                <img className="naive-algo" src={Naive} />
-                                </div>
-                                <div className="native-result">
-                                    {
-                                        BayesData &&
-                                        BayesData
-                                    }
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
                 }
+                
+                  </Row>      
+                
         </>
     )
 }}
