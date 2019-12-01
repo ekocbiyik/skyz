@@ -54,7 +54,7 @@ class Welcome extends React.Component {
                             Çagrı Bıyık
                         </div>
                         <div className="nickname">
-                            - Nickname not found
+                            - Öv Beni Öv
                         </div>
                     </div>
                 </Col>
@@ -69,7 +69,7 @@ class Welcome extends React.Component {
                             Talha Altun
                         </div>
                         <div className="nickname">
-                            - İlk Elenecek Olan
+                            - İlk Elenecek Eleman
                         </div>
                     </div>
                     <div className="image-wrapper">

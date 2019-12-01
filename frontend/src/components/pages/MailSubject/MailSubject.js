@@ -59,14 +59,14 @@ class MailSubject extends React.Component {
             </div>
             <div className="email-subject">
                 <Collapse accordion>
-                     <Panel header={<div>Etkinlik {this.state['isLoaded1'] === undefined ? <Spin /> : 'Yuklendiii'}</div>} key="1">
+                     <Panel header={<div>Etkinlik {this.state['isLoaded1'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="1">
                         <p>{text}</p>
                         dgdgd
                     </Panel>
-                    <Panel header={<div>Spor Bulteni {this.state['isLoaded2'] === undefined ? <Spin /> : 'Yuklendiii'}</div>} key="2">
+                    <Panel header={<div>Spor Bulteni {this.state['isLoaded2'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="2">
                         <p>{text}</p>
                     </Panel>
-                    <Panel header={<div>Finans {this.state['isLoaded3'] === undefined ? <Spin /> : 'Yuklendiii'}</div>} key="3">
+                    <Panel header={<div>Finans {this.state['isLoaded3'] === undefined ? <Spin size="small" /> : 'Yuklendiii'}</div>} key="3">
                         <p>{text}</p>
                     </Panel>
                 </Collapse>

@@ -78,15 +78,26 @@ body {
 }
 
 .find-category {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .email-subject {
   width: 500px;
   margin: auto;
   margin-top: 40px;
+}
+
+.elastic-algo {
+  width: 350px;
+}
+
+.naive-algo {
+  width: 200px;
+}
+
+.algo-result {
+  text-align: center;
 }
