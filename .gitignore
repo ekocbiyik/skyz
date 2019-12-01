@@ -26,3 +26,5 @@ coverage.xml
 .eggs/
 .idea/
 prospector.json
+middleware/target
+backend/env
