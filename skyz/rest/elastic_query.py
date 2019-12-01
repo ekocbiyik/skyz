@@ -22,7 +22,7 @@ class ElasticView(APIView):
     }
 
     def post(self, request):
-        category = self.post_to_elastic(self.body)
+        category = self.post_to_elastic(self.request.query_params['context'])
         return Response(category)
 
     def post_to_elastic(self, like):
