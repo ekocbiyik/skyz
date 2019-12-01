@@ -17,7 +17,7 @@ class App extends React.Component {
       <div>
         <Router>
           <Switch>
-            <Route path="/find-category">
+            <Route path="/category">
               <FindCategory />
             </Route>
             <Route path="/email">

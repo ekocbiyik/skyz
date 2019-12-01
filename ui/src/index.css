@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 
 .avatar-img {
   border-radius: 50%;
@@ -96,10 +97,22 @@ body {
 
 .naive-algo {
   width: 200px;
+  margin-top: 7px;
 }
 
-.algo-result {
+.elastic-result {
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+  font-size: 30px;
+}
+
+.native-result {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+  font-size: 30px;
 }
 
 .category-result {
@@ -108,4 +121,9 @@ body {
 
 .category-spin {
   margin-left: 6px !important;
+}
+
+.find-category .ant-input-search {
+  width: 500px !important;
+  height: 40px;
 }

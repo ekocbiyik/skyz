@@ -32,7 +32,7 @@ class Welcome extends React.Component {
                             Enbiya Koçbıyık
                         </div>
                         <div className="nickname">
-                            - Ekibin Demirbaşı
+                            - Patron
                         </div>
                     </div>
                     <div className="image-wrapper">
@@ -88,7 +88,7 @@ class Welcome extends React.Component {
         </Row>
         <Row>
             <Col className="start">
-                <Link to="/find-category">
+                <Link to="/category">
                     <Button type="danger">Hadi Başlayalım</Button>
                 </Link>
             </Col>
