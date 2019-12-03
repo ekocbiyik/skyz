@@ -1,7 +1,7 @@
 #Türkçe metinlerin sınıflandırılması.
 ​
-## skyz
-####Kullandığımız Teknolojiler  
+# skyz
+### Kullandığımız Teknolojiler  
 Django - https://github.com/django/django  
 Spring Boot - https://github.com/spring-projects/spring-boot  
 React - https://github.com/reactjs    
